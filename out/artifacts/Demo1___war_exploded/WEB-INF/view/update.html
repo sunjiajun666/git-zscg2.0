@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/Soldier(method='upd')}" method="post">
+  部门id：<input type="text" th:value="${dept.sid}"  name="sid"   readonly="readonly" ></br>
+  部门编号：<input type="text" th:value="${dept.department}" name="department" ></br>
+  部门名称：<input type="text" th:value="${dept.sname}"  name="sname" ></br>
+  部门省份：  <input type="text" th:value="${dept.province}"  name="province" ></br>
+  部门人数：  <input type="text"  th:value="${dept.numbera}" name="numbera" ></br>
+  部门描述：<textarea name="slock" th:text="${dept.slock}"cols="30" rows="10"></textarea>
+  <input type="submit" value="点我"></br>
+
+</form>
+</body>
+</html>

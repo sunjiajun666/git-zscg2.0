@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/Soldier(method='delSoldier')}" method="post">
+<a th:href="@{/Soldier(method='addSoldiers')}">创建</a>
+
+<input type="submit"  name="name"  value="编辑"  >
+<input type="submit"  name="name"  value="删除" >
+
+<table border="1">
+
+  <tr>
+    <th></th>
+    <th>ID</th>
+    <th>编号</th>
+    <th>名称</th>
+    <th>所属省份</th>
+    <th>部门编号</th>
+    <th>描述</th>
+  </tr>
+
+  <tr th:each="item:${allSoldiers}">
+   <td> <input type="checkbox" name="id" th:value="${item.sid}"></td>
+
+    <td th:text="${item.sid}"></td>
+    <td th:text="${item.department}"></td>
+    <td th:text="${item.sname}"></td>
+    <td th:text="${item.province}"></td>
+    <td th:text="${item.numbera}"></td>
+    <td th:text="${item.slock}"></td>
+  </tr>
+
+
+
+
+</table>
+</form>
+</body>
+</html>

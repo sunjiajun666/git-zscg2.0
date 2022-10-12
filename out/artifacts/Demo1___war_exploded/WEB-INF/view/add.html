@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/Soldier(method='add')}" method="post">
+    部门id：<input type="text"  name="sid"  ></br>
+    部门编号：<input type="text"  name="department" ></br>
+    部门名称：<input type="text"  name="sname" ></br>
+    部门省份：  <input type="text"  name="province" ></br>
+    部门人数：  <input type="text"  name="numbera" ></br>
+    部门描述：<textarea name="slock" id="" cols="30" rows="10"></textarea></br>
+    <input type="submit" value="保存">
+
+
+</form>
+<form th:action="@{/Soldier(method='addkk')}" method="post">
+    <input type="submit" value="取消">
+</form>
+
+</body>
+</html>
